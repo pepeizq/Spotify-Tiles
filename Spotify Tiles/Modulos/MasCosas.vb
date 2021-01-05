@@ -7,10 +7,10 @@ Imports Windows.UI.Core
 
 Module MasCosas
 
-    Dim codigoFuente As String = "https://github.com/pepeizq/Steam-Tiles"
+    Dim codigoFuente As String = "https://github.com/pepeizq/Spotify-Tiles"
     Dim traduccion As String = "https://poeditor.com/join/project/93E4lCQLWI"
     Dim calificar As Boolean = True
-    Dim youtube As String = "https://www.youtube.com/watch?v=rsm54AbJZZk"
+    Dim youtube As String = "https://www.youtube.com/watch?v=GL0laBfP5XU"
     Dim pepeizqapps As Boolean = True
     Dim pepeizqdeals As Boolean = True
     Dim twitter As String = "https://twitter.com/pepeizqu"

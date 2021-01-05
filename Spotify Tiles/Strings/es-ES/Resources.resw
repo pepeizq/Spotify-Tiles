@@ -370,7 +370,7 @@
     <value>Más Tiles</value>
   </data>
   <data name="MoreTilesError" xml:space="preserve">
-    <value>No se ha podido cargar el listado de aplicaciones, pero puedes visitar mi web para verlas.</value>
+    <value>No se ha podido cargar los datos</value>
   </data>
   <data name="OpenWeb" xml:space="preserve">
     <value>Abrir Web</value>
