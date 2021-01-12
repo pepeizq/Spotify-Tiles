@@ -9,7 +9,7 @@
   <Identity
     Name="5078pepeizq.TilesforSpotifyAlbums"
     Publisher="CN=C91088FC-231C-4E13-86D1-5F9658173DA7"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="3ceb1c9b-007f-4bd6-8d45-20066194bff2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
