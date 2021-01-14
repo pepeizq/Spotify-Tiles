@@ -20,6 +20,9 @@ Namespace Interfaz
             Dim gridAlbums As Grid = pagina.FindName("gridAlbums")
             gridAlbums.Visibility = Visibility.Collapsed
 
+            Dim gridUsuarioID As Grid = pagina.FindName("gridUsuarioID")
+            gridUsuarioID.Visibility = Visibility.Collapsed
+
             Dim gridAñadirTile As Grid = pagina.FindName("gridAñadirTile")
             gridAñadirTile.Visibility = Visibility.Collapsed
 

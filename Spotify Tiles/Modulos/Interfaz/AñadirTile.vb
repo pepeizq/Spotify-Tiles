@@ -594,7 +594,7 @@ Namespace Interfaz
             Dim pagina As Page = frame.Content
 
             Dim gridAlbums As Grid = pagina.FindName("gridAlbums")
-            Pestañas.Visibilidad(gridAlbums, recursos.GetString("Albums"), Nothing)
+            Pestañas.Visibilidad(gridAlbums, recursos.GetString("Spotify_AlbumsPlaylists"), Nothing)
 
         End Sub
 

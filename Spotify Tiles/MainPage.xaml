@@ -83,30 +83,112 @@
                 <Grid x:Name="gridAlbums" Visibility="Collapsed">
                     <ScrollViewer x:Name="svAlbums" Padding="0,0,30,0" VerticalScrollBarVisibility="Auto">
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                            <StackPanel Orientation="Vertical" Padding="30" Margin="30,0,30,20" MaxWidth="500" HorizontalAlignment="Center">
-                                <StackPanel.Background>
-                                    <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
-                                </StackPanel.Background>
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                                <TextBlock x:Uid="Spotify_SearchMessage" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                <StackPanel Grid.Column="0" Orientation="Vertical">
+                                    <TextBlock x:Uid="Spotify_Albums" Foreground="White" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center"/>
 
-                                <TextBox x:Name="tbBuscadorAlbums" RequestedTheme="Dark" Margin="0,20,0,30"/>
+                                    <StackPanel Orientation="Vertical" Padding="30" Margin="30" MaxWidth="500">
+                                        <StackPanel.Background>
+                                            <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
+                                        </StackPanel.Background>
 
-                                <Button x:Name="botonBuscarAlbums" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0" HorizontalAlignment="Center">
-                                    <Button.Content>
-                                        <StackPanel Orientation="Horizontal">
-                                            <iconos:FontAwesome Icon="Solid_Search" Foreground="White" Margin="0,0,15,0"/>
-                                            <TextBlock x:Uid="Spotify_SearchAlbum" Foreground="White"/>
-                                        </StackPanel>
-                                    </Button.Content>
-                                </Button>
-                            </StackPanel>
+                                        <TextBlock x:Uid="Spotify_SearchAlbumMessage" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
 
-                            <ProgressBar x:Name="pbBuscadorAlbums" IsIndeterminate="True" Width="150" HorizontalAlignment="Center" Foreground="White" Visibility="Collapsed" Margin="0,0,0,20"/>
+                                        <TextBox x:Name="tbBuscadorAlbums" RequestedTheme="Dark" Margin="0,20,0,30"/>
 
+                                        <Button x:Name="botonBuscarAlbums" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0" HorizontalAlignment="Center">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <iconos:FontAwesome Icon="Solid_Search" Foreground="White" Margin="0,0,15,0"/>
+                                                    <TextBlock x:Uid="Spotify_SearchAlbum" Foreground="White"/>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+
+                                    <ProgressBar x:Name="pbBuscadorAlbums" IsIndeterminate="True" Width="150" HorizontalAlignment="Center" Foreground="White" Visibility="Collapsed" Margin="0,0,0,20"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" Orientation="Vertical">
+                                    <TextBlock x:Uid="Spotify_Playlists" Foreground="White" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+
+                                    <StackPanel Orientation="Vertical" Padding="30" Margin="30" MaxWidth="500">
+                                        <StackPanel.Background>
+                                            <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
+                                        </StackPanel.Background>
+
+                                        <TextBlock x:Uid="Spotify_SearchPlaylistsMessage" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                       
+                                        <TextBox x:Name="tbBuscadorPlaylists" RequestedTheme="Dark" Margin="0,20,0,30"/>
+
+                                        <Grid>
+                                            <Button x:Name="botonAbrirUsuarioID" Style="{ThemeResource ButtonRevealStyle}" Padding="18,15" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left">
+                                                <Button.Content>
+                                                    <iconos:FontAwesome Icon="Solid_InfoCircle" Foreground="White">
+                                                        <ToolTipService.ToolTip>
+                                                            <ToolTip>
+                                                                <ToolTip.Style>
+                                                                    <Style TargetType="ToolTip">
+                                                                        <Setter Property="Background" Value="Transparent"/>
+                                                                        <Setter Property="Padding" Value="0"/>
+                                                                    </Style>
+                                                                </ToolTip.Style>
+
+                                                                <Grid Padding="20">
+                                                                    <Grid.Background>
+                                                                        <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.9"/>
+                                                                    </Grid.Background>
+
+                                                                    <TextBlock x:Uid="Spotify_UserID" Foreground="White" TextWrapping="Wrap" FontSize="15"/>
+                                                                </Grid>
+                                                            </ToolTip>
+                                                        </ToolTipService.ToolTip>
+                                                    </iconos:FontAwesome>
+                                                </Button.Content>
+                                            </Button>
+
+                                            <Button x:Name="botonBuscarPlaylists" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0" HorizontalAlignment="Center">
+                                                <Button.Content>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <iconos:FontAwesome Icon="Solid_Search" Foreground="White" Margin="0,0,15,0"/>
+                                                        <TextBlock x:Uid="Spotify_SearchPlaylists" Foreground="White"/>
+                                                    </StackPanel>
+                                                </Button.Content>
+                                            </Button>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <ProgressBar x:Name="pbBuscadorPlaylists" IsIndeterminate="True" Width="150" HorizontalAlignment="Center" Foreground="White" Visibility="Collapsed" Margin="0,0,0,20"/>
+                                </StackPanel>
+                            </Grid>
+                                                                                  
                             <controls:AdaptiveGridView x:Name="gvTiles" IsItemClickEnabled="True" animations:ReorderGridAnimation.Duration="250"/>
                         </StackPanel>
                     </ScrollViewer>
+                </Grid>
+
+                <Grid x:Name="gridUsuarioID" Visibility="Collapsed" Padding="10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="30" Margin="30">
+                        <StackPanel.Background>
+                            <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
+                        </StackPanel.Background>
+
+                        <Button x:Name="botonUsuarioIDVolver" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0" Margin="0,0,0,30" HorizontalAlignment="Center">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconos:FontAwesome Icon="Solid_ArrowLeft" Foreground="White" Margin="0,0,15,0"/>
+                                    <TextBlock x:Uid="Back" Foreground="White"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <controls:ImageEx Source="Assets/cuenta.png" Stretch="Uniform" IsCacheEnabled="True" EnableLazyLoading="True"/>
+                    </StackPanel>
                 </Grid>
 
                 <Grid x:Name="gridAñadirTile" Visibility="Collapsed" Padding="10">

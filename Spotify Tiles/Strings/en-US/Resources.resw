@@ -540,22 +540,79 @@
   <data name="Steam_AppMessage" xml:space="preserve">
     <value>Besides adding Tiles for your Steam games, you can also add a Tile to start Steam only.</value>
   </data>
-  <data name="Albums" xml:space="preserve">
-    <value>Albums</value>
+  <data name="Spotify_AlbumsPlaylists" xml:space="preserve">
+    <value>Albums and Playlists</value>
   </data>
   <data name="Spotify_SearchAlbum.Text" xml:space="preserve">
     <value>Search Album</value>
   </data>
-  <data name="Spotify_SearchMessage.Text" xml:space="preserve">
+  <data name="Spotify_SearchAlbumMessage.Text" xml:space="preserve">
     <value>Enter the name of the album or artist, and click search:</value>
   </data>
   <data name="Spotify_StoreDescription" xml:space="preserve">
-    <value>Pin Tiles of your Spotify albums to the Windows 10 Start Menu.</value>
+    <value>Pin Tiles of your Spotify albums and playlists to the Windows 10 Start Menu.</value>
   </data>
   <data name="Spotify_StoreTags" xml:space="preserve">
     <value>Spotify,Music</value>
   </data>
   <data name="Spotify_Title" xml:space="preserve">
-    <value>Tiles for Spotify Albums</value>
+    <value>Tiles for Spotify Albums and Playlists</value>
+  </data>
+  <data name="Webs" xml:space="preserve">
+    <value>Websites</value>
+  </data>
+  <data name="Webs_Generate.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="Webs_Message.Text" xml:space="preserve">
+    <value>Enter the link of the website and click generate:</value>
+  </data>
+  <data name="Webs_Title" xml:space="preserve">
+    <value>Tiles for Webs</value>
+  </data>
+  <data name="Webs_StoreDescription" xml:space="preserve">
+    <value>Pin Tiles of websites to the Windows 10 Start Menu.</value>
+  </data>
+  <data name="Webs_StoreTags" xml:space="preserve">
+    <value>Edge,Firefox,Opera,Chrome</value>
+  </data>
+  <data name="Netflix_SearchMessage.Text" xml:space="preserve">
+    <value>Enter the title of the movie or series:</value>
+  </data>
+  <data name="Netflix_SearchVideo.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Netflix_StoreDescription" xml:space="preserve">
+    <value>Pin Tiles of Netflix movies and series to the Windows 10 Start Menu.</value>
+  </data>
+  <data name="Netflix_StoreMessage1" xml:space="preserve">
+    <value>It is compatible with the Netflix app for Windows 10 and with any web browser that supports Netflix.</value>
+  </data>
+  <data name="Netflix_StoreTags" xml:space="preserve">
+    <value>Netflix,Movies,Series</value>
+  </data>
+  <data name="Netflix_Title" xml:space="preserve">
+    <value>Tiles for Netflix Movies and Series</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="Back.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Spotify_Albums.Text" xml:space="preserve">
+    <value>Albums</value>
+  </data>
+  <data name="Spotify_Playlists.Text" xml:space="preserve">
+    <value>Playlists</value>
+  </data>
+  <data name="Spotify_SearchPlaylists.Text" xml:space="preserve">
+    <value>Search Playlists</value>
+  </data>
+  <data name="Spotify_SearchPlaylistsMessage.Text" xml:space="preserve">
+    <value>Enter your user id:</value>
+  </data>
+  <data name="Spotify_UserID.Text" xml:space="preserve">
+    <value>How to find out your user id</value>
   </data>
 </root>

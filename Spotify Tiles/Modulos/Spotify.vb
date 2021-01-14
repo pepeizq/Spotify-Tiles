@@ -24,13 +24,21 @@ Module Spotify
 
     End Sub
 
-    Public Async Function Buscador(texto As String) As Task(Of SearchResponse)
+    Public Async Function BuscadorAlbums(texto As String) As Task(Of SearchResponse)
 
         Dim peticion As New SearchRequest(SearchRequest.Types.Album, texto) With {
             .Limit = 50
         }
 
         Dim resultados As SearchResponse = Await cliente.Search.Item(peticion)
+
+        Return resultados
+
+    End Function
+
+    Public Async Function BuscadorPlaylists(texto As String) As Task(Of Paging(Of SimplePlaylist))
+
+        Dim resultados As Paging(Of SimplePlaylist) = Await cliente.Playlists.GetUsers(texto)
 
         Return resultados
 

@@ -3,9 +3,9 @@
 
     Private Sub Nv_Loaded(sender As Object, e As RoutedEventArgs)
 
-        Dim recursos As New Resources.ResourceLoader()
+        Dim recursos As New Resources.ResourceLoader
 
-        nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("Albums"), FontAwesome5.EFontAwesomeIcon.Brands_Spotify))
+        nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("Spotify_AlbumsPlaylists"), FontAwesome5.EFontAwesomeIcon.Brands_Spotify))
         nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesome5.EFontAwesomeIcon.Solid_Cog))
         nvPrincipal.MenuItems.Add(New NavigationViewItemSeparator)
 
@@ -13,13 +13,13 @@
 
     Private Sub Nv_ItemInvoked(sender As NavigationView, args As NavigationViewItemInvokedEventArgs)
 
-        Dim recursos As New Resources.ResourceLoader()
+        Dim recursos As New Resources.ResourceLoader
 
         Dim item As TextBlock = args.InvokedItem
 
         If gridProgreso.Visibility = Visibility.Collapsed Then
             If Not item Is Nothing Then
-                If item.Text = recursos.GetString("Albums") Then
+                If item.Text = recursos.GetString("Spotify_AlbumsPlaylists") Then
                     Interfaz.Pestañas.Visibilidad(gridAlbums, item.Text, item)
                 ElseIf item.Text = recursos.GetString("Config") Then
                     Interfaz.Pestañas.Visibilidad(gridConfig, item.Text, item)
@@ -32,7 +32,7 @@
     Private Sub Page_Loaded(sender As Object, e As RoutedEventArgs)
 
         'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "es-ES"
-        Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US"
+        'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US"
 
         Cache.Cargar()
         Interfaz.Albums.Cargar()

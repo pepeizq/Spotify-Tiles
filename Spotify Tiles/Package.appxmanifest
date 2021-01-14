@@ -9,12 +9,12 @@
   <Identity
     Name="5078pepeizq.TilesforSpotifyAlbums"
     Publisher="CN=C91088FC-231C-4E13-86D1-5F9658173DA7"
-    Version="1.0.2.0" />
+    Version="1.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="3ceb1c9b-007f-4bd6-8d45-20066194bff2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Tiles for Spotify Albums</DisplayName>
+    <DisplayName>Tiles for Spotify Albums and Playlists</DisplayName>
     <PublisherDisplayName>pepeizq&apos;s apps</PublisherDisplayName>
     <Logo>Assets\Logos\StoreLogo.png</Logo>
   </Properties>
@@ -32,7 +32,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Spotify_Tiles.App">
       <uap:VisualElements
-        DisplayName="Tiles for Spotify Albums"
+        DisplayName="ms-resource:Spotify_Title"
         Square150x150Logo="Assets\Logos\Square150x150Logo.png"
         Square44x44Logo="Assets\Logos\Square44x44Logo.png"
         Description="https://pepeizqapps.com/"
@@ -44,7 +44,7 @@
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png"  BackgroundColor="#15863d"/>
+        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png" a:Optional="true" xmlns:a="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" BackgroundColor="#15863d"/>
         <uap:LockScreen BadgeLogo="Assets\Logos\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
