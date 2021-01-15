@@ -109,7 +109,9 @@ Namespace Interfaz
                 Dim listaAlbums As New List(Of Tile)
 
                 For Each album In resultados.Albums.Items
-                    Dim album2 As New Tile(album.Name, album.Id, album.Uri, album.Images(0).Url, album.Images(0).Url, album.Images(0).Url, album.Images(0).Url)
+                    Dim imagen As String = Await Configuracion.Cache.DescargarImagen(album.Images(0).Url, album.Id, "imagen")
+
+                    Dim album2 As New Tile(album.Name, album.Id, album.Uri, imagen, imagen, imagen, imagen)
                     listaAlbums.Add(album2)
                 Next
 
@@ -146,7 +148,9 @@ Namespace Interfaz
                 Dim listaPlaylists As New List(Of Tile)
 
                 For Each playlist In resultados.Items
-                    Dim playlist2 As New Tile(playlist.Name, playlist.Id, playlist.Uri, playlist.Images(0).Url, playlist.Images(0).Url, playlist.Images(0).Url, playlist.Images(0).Url)
+                    Dim imagen As String = Await Configuracion.Cache.DescargarImagen(playlist.Images(0).Url, playlist.Id, "imagen")
+
+                    Dim playlist2 As New Tile(playlist.Name, playlist.Id, playlist.Uri, imagen, imagen, imagen, imagen)
                     listaPlaylists.Add(playlist2)
                 Next
 

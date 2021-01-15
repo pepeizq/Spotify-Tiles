@@ -540,23 +540,8 @@
   <data name="Steam_AppMessage" xml:space="preserve">
     <value>Ademas de añadir Tiles para tus juegos de Steam, también puedes añadir una Tile para iniciar solamente Steam.</value>
   </data>
-  <data name="Spotify_AlbumsPlaylists" xml:space="preserve">
-    <value>Álbumes y Playlists</value>
-  </data>
-  <data name="Spotify_SearchAlbum.Text" xml:space="preserve">
-    <value>Buscar Álbum</value>
-  </data>
-  <data name="Spotify_SearchAlbumMessage.Text" xml:space="preserve">
-    <value>Introduce el nombre del álbum o del artista, y clickea buscar:</value>
-  </data>
-  <data name="Spotify_StoreDescription" xml:space="preserve">
-    <value>Añade Tiles de tus álbumes y playlists de Spotify en el Menú Inicio de Windows 10.</value>
-  </data>
-  <data name="Spotify_StoreTags" xml:space="preserve">
-    <value>Spotify,Música,Playlists</value>
-  </data>
-  <data name="Spotify_Title" xml:space="preserve">
-    <value>Tiles para los álbumes y playlists de Spotify</value>
+  <data name="Albums" xml:space="preserve">
+    <value>Álbumes</value>
   </data>
   <data name="Webs" xml:space="preserve">
     <value>Páginas Web</value>
@@ -597,20 +582,47 @@
   <data name="Videos" xml:space="preserve">
     <value>Videos</value>
   </data>
+  <data name="ConfigFileCleaning.Text" xml:space="preserve">
+    <value>Limpieza de Archivos</value>
+  </data>
+  <data name="ConfigFileCleaning2.Text" xml:space="preserve">
+    <value>Puedes borrar todos los ficheros generados por la aplicación, pero una vez borrados se reiniciará la aplicación (esta opción no afecta a la Caché).</value>
+  </data>
+  <data name="ConfigFileCleaningClean.Text" xml:space="preserve">
+    <value>Borrar Archivos</value>
+  </data>
   <data name="Back.Text" xml:space="preserve">
     <value>Volver</value>
   </data>
   <data name="Spotify_Albums.Text" xml:space="preserve">
     <value>Álbumes</value>
   </data>
+  <data name="Spotify_AlbumsPlaylists" xml:space="preserve">
+    <value>Álbumes y Playlists</value>
+  </data>
   <data name="Spotify_Playlists.Text" xml:space="preserve">
     <value>Playlists</value>
+  </data>
+  <data name="Spotify_SearchAlbum.Text" xml:space="preserve">
+    <value>Buscar Álbum</value>
+  </data>
+  <data name="Spotify_SearchAlbumMessage.Text" xml:space="preserve">
+    <value>Introduce el nombre del álbum o del artista, y clickea buscar:</value>
   </data>
   <data name="Spotify_SearchPlaylists.Text" xml:space="preserve">
     <value>Buscar Playlists</value>
   </data>
   <data name="Spotify_SearchPlaylistsMessage.Text" xml:space="preserve">
     <value>Introduce tu id de usuario:</value>
+  </data>
+  <data name="Spotify_StoreDescription" xml:space="preserve">
+    <value>Añade Tiles de tus álbumes y playlists de Spotify en el Menú Inicio de Windows 10.</value>
+  </data>
+  <data name="Spotify_StoreTags" xml:space="preserve">
+    <value>Spotify,Música,Playlists</value>
+  </data>
+  <data name="Spotify_Title" xml:space="preserve">
+    <value>Tiles para los álbumes y playlists de Spotify</value>
   </data>
   <data name="Spotify_UserID.Text" xml:space="preserve">
     <value>Cómo averiguar tu id de usuario</value>

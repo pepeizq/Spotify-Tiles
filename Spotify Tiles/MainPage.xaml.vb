@@ -34,7 +34,8 @@
         'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "es-ES"
         'Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US"
 
-        Cache.Cargar()
+        Configuracion.Cache.Cargar()
+        Configuracion.LimpiezaArchivos.Cargar()
         Interfaz.Albums.Cargar()
         Interfaz.AñadirTile.Cargar()
         Spotify.Cargar()
