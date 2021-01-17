@@ -87,18 +87,15 @@ Namespace Interfaz
 
         Private Async Sub BuscarAlbumsClick(sender As Object, e As RoutedEventArgs)
 
-            Dim boton As Button = sender
-            boton.IsEnabled = False
-
             Dim frame As Frame = Window.Current.Content
             Dim pagina As Page = frame.Content
 
             Dim pbBuscadorAlbums As ProgressBar = pagina.FindName("pbBuscadorAlbums")
             pbBuscadorAlbums.Visibility = Visibility.Visible
 
-            Dim tbBuscadorAlbums As TextBox = pagina.FindName("tbBuscadorAlbums")
-            tbBuscadorAlbums.IsEnabled = False
+            Estado(False)
 
+            Dim tbBuscadorAlbums As TextBox = pagina.FindName("tbBuscadorAlbums")
             Dim resultados As SearchResponse = Await Spotify.BuscadorAlbums(tbBuscadorAlbums.Text.Trim)
 
             If Not resultados Is Nothing Then
@@ -119,15 +116,11 @@ Namespace Interfaz
             End If
 
             pbBuscadorAlbums.Visibility = Visibility.Collapsed
-            boton.IsEnabled = True
-            tbBuscadorAlbums.IsEnabled = True
+            Estado(True)
 
         End Sub
 
         Private Async Sub BuscarPlaylistsClick(sender As Object, e As RoutedEventArgs)
-
-            Dim boton As Button = sender
-            boton.IsEnabled = False
 
             Dim frame As Frame = Window.Current.Content
             Dim pagina As Page = frame.Content
@@ -135,9 +128,9 @@ Namespace Interfaz
             Dim pbBuscadorPlaylists As ProgressBar = pagina.FindName("pbBuscadorPlaylists")
             pbBuscadorPlaylists.Visibility = Visibility.Visible
 
-            Dim tbBuscadorPlaylists As TextBox = pagina.FindName("tbBuscadorPlaylists")
-            tbBuscadorPlaylists.IsEnabled = False
+            Estado(False)
 
+            Dim tbBuscadorPlaylists As TextBox = pagina.FindName("tbBuscadorPlaylists")
             Dim resultados As Paging(Of SimplePlaylist) = Await Spotify.BuscadorPlaylists(tbBuscadorPlaylists.Text.Trim)
 
             If Not resultados Is Nothing Then
@@ -158,8 +151,7 @@ Namespace Interfaz
             End If
 
             pbBuscadorPlaylists.Visibility = Visibility.Collapsed
-            boton.IsEnabled = True
-            tbBuscadorPlaylists.IsEnabled = True
+            Estado(True)
 
         End Sub
 
@@ -231,6 +223,25 @@ Namespace Interfaz
 
             Dim gridAlbums As Grid = pagina.FindName("gridAlbums")
             Pestañas.Visibilidad(gridAlbums, recursos.GetString("Spotify_AlbumsPlaylists"), Nothing)
+
+        End Sub
+
+        Private Sub Estado(estado As Boolean)
+
+            Dim frame As Frame = Window.Current.Content
+            Dim pagina As Page = frame.Content
+
+            Dim botonBuscarAlbums As Button = pagina.FindName("botonBuscarAlbums")
+            botonBuscarAlbums.IsEnabled = estado
+
+            Dim tbBuscadorAlbums As TextBox = pagina.FindName("tbBuscadorAlbums")
+            tbBuscadorAlbums.IsEnabled = estado
+
+            Dim botonBuscarPlaylists As Button = pagina.FindName("botonBuscarPlaylists")
+            botonBuscarPlaylists.IsEnabled = estado
+
+            Dim tbBuscadorPlaylists As TextBox = pagina.FindName("tbBuscadorPlaylists")
+            tbBuscadorPlaylists.IsEnabled = estado
 
         End Sub
 
