@@ -127,11 +127,11 @@
                                         <TextBox x:Name="tbBuscadorPlaylists" RequestedTheme="Dark" Margin="0,20,0,30"/>
 
                                         <Grid>
-                                            <Button x:Name="botonAbrirUsuarioID" Style="{ThemeResource ButtonRevealStyle}" Padding="18,15" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left">
+                                            <Button x:Name="botonAbrirUsuarioID" Style="{ThemeResource ButtonRevealStyle}" Padding="15,12" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Center">
                                                 <Button.Content>
-                                                    <iconos:FontAwesome Icon="Solid_InfoCircle" Foreground="White">
+                                                    <iconos:FontAwesome Icon="Solid_Info" Foreground="White">
                                                         <ToolTipService.ToolTip>
-                                                            <ToolTip>
+                                                            <ToolTip Placement="Bottom">
                                                                 <ToolTip.Style>
                                                                     <Style TargetType="ToolTip">
                                                                         <Setter Property="Background" Value="Transparent"/>
